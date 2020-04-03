@@ -1,4 +1,4 @@
-#!c:\users\vasty\onedrive\desktop\python\quiz-app\myvenv\scripts\python.exe
+#!c:\users\vasty\onedrive\desktop\python\quiz-app-2\backend\myvenv\scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

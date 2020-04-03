@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8%dp6_+rg0l3s)2u9hg1ed^e%yd(+ryn46$o_qpi+8@3!wl#!)'
+SECRET_KEY = 'gjj)@d*#d4$6xda(n7@+sf9omcldp73j)%80o874la_$kfcz8h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -28,8 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'quizApi',
-
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -42,7 +41,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backendQuizApi.urls'
+ROOT_URLCONF = 'backendapi.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backendQuizApi.wsgi.application'
+WSGI_APPLICATION = 'backendapi.wsgi.application'
 
 
 # Database

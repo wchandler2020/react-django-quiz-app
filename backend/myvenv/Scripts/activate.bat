@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\vasty\OneDrive\Desktop\python\quiz-app\myvenv"
+set "VIRTUAL_ENV=C:\Users\vasty\OneDrive\Desktop\python\quiz-app-2\backend\myvenv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
