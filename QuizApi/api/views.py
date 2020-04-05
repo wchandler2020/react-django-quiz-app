@@ -1,9 +1,11 @@
 from rest_framework import viewsets, status
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.response import Response
 from .models import Question, Answer
 from .serializers import QuestionSerializer, AnswerSerializer, UserSerializer
 from rest_framework.decorators import action
 from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -12,6 +14,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
+    authentication_classes = (TokenAuthentication, )
+    permission_classes = (AllowAny,)
 
     @action(detail=True, methods=['POST'])
     def rate_question(self, request, pk=None):
