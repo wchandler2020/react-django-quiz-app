@@ -6,7 +6,7 @@ from rest_framework.authtoken.models import Token
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = ("id", "question")
+        fields = ("id", "question", "language_choices", "solution")
 
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
