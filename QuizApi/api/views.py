@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-
+    permission_classes = (AllowAny,)
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer

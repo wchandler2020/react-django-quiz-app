@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-export default class Navbar extends Component {
+import { withCookies } from "react-cookie";
+class Navbar extends Component {
   state = {
     credentials: {
       username: "",
       password: "",
     },
+    isLoggedIn: false,
   };
 
   handleChange = (e) => {
@@ -13,6 +15,17 @@ export default class Navbar extends Component {
     newCredentials[e.target.name] = e.target.value;
     this.setState({ credentials: newCredentials });
   };
+
+  // handleLoginNavbar = (isLoggedIn) => {
+  //   const newLogin = isLoggedIn;
+  //   this.setState((state) => {
+  //     if (state.isLoggedIn === newLogin) {
+  //       return null;
+  //     } else {
+  //       return { isLoggedIn };
+  //     }
+  //   });
+  // };
 
   handleLogin = (e) => {
     console.log(this.state.credentials);
@@ -24,7 +37,12 @@ export default class Navbar extends Component {
       .then((resp) => resp.json())
       .then((res) => {
         console.log(res.token);
-        window.location.href = "/questions";
+        if (res.token) {
+          this.props.cookies.set("quiz-token", res.token);
+          window.location.href = "/categories";
+          this.setState({ isLoggedIn: true });
+          console.log(this.state.isLoggedIn);
+        }
       })
       .catch((error) => console.log(error));
   };
@@ -33,7 +51,7 @@ export default class Navbar extends Component {
     const { password, username } = this.state.credentials;
     return (
       <Fragment>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
           <Link className="navbar-brand" to="/">
             Agatha Quiztie
           </Link>
@@ -51,8 +69,8 @@ export default class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link className="nav-link" to="/home">
-                  Home <span className="sr-only">(current)</span>
+                <Link className="nav-link" to="/categories">
+                  Categories
                 </Link>
               </li>
               <li className="nav-item">
@@ -61,11 +79,17 @@ export default class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/texteditor">
+                  Practice Code
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
             </ul>
+
             <form className="form-inline my-2 my-lg-0">
               <input
                 className="form-control mr-sm-3"
@@ -74,6 +98,7 @@ export default class Navbar extends Component {
                 name="username"
                 value={username}
                 onChange={this.handleChange}
+                style={{ display: this.state.isLoggedIn ? "none" : "block" }}
               />
               <input
                 className="form-control mr-sm-3"
@@ -82,13 +107,15 @@ export default class Navbar extends Component {
                 name="password"
                 value={password}
                 onChange={this.handleChange}
+                style={{ display: this.state.isLoggedIn ? "none" : "block" }}
               />
               <button
                 type="button"
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-outline-success my-2 my-sm-0 login-btn"
                 onClick={this.handleLogin}
+                style={{ border: "#009688 !important" }}
               >
-                Login
+                {this.state.isLoggedIn ? "Log Out" : "Log In"}
               </button>
             </form>
           </div>
@@ -97,3 +124,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default withCookies(Navbar);

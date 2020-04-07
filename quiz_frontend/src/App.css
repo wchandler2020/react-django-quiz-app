@@ -1,5 +1,13 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .inner {
-  background: url("./components/static/images/main_bg.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("./components/static/images/main_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +28,7 @@
   text-align: center;
   font-size: 5rem;
   margin-bottom: 20px;
+  font-family: "IM Fell French Canon SC", serif;
 }
 
 .intro-text {
@@ -28,4 +37,75 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.category-cards {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  margin-bottom: 30px;
+  width: 27% !important;
+}
+
+.display-4 {
+  text-align: center;
+  font-weight: bold !important;
+  margin-top: 20px;
+}
+
+.login-btn {
+  border: 1px solid #009688 !important;
+  color: #009688 !important;
+}
+
+.reg-form {
+  margin-top: 100px;
+}
+
+.reg-btn {
+  border: 1px solid #009688 !important;
+  color: #009688 !important;
+  font-size: 20px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+.navbar-brand {
+  font-family: "IM Fell French Canon SC", serif;
+  font-size: 2rem;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .category-cards {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .display-4 {
+    text-align: center;
+    font-weight: bold !important;
+    margin-top: 15px;
+  }
+
+  .card {
+    margin-bottom: 30px;
+    width: 90% !important;
+  }
+
+  .btn-lg {
+    font-size: 12px !important;
+  }
 }
