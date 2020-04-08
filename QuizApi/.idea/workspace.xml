@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a820a9e-c584-4f02-880c-b74b863549b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myvenv/Scripts/static-script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myvenv/Scripts/static.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements-dev.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/components/layout/Homepage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/components/layout/Homepage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/components/layout/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/components/layout/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/components/questions/QuestionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/components/questions/QuestionList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quiz_frontend/src/components/questions/question.css" beforeDir="false" afterPath="$PROJECT_DIR$/../quiz_frontend/src/components/questions/question.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizzApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/quizzApi/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizzApi/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/quizzApi/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
